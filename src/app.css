@@ -71,8 +71,13 @@
 @layer base {
   * {
     @apply border-border;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(19, 222, 19) transparent;
+    scrollbar-arrow-color: rgb(19, 222, 19);
+    scroll-behavior: smooth;
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
   }
 }
