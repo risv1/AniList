@@ -4,16 +4,12 @@ export const GET = async({ params }) => {
     
     const id = params.id
     try{
-        const res = await fetch(`${API_URL}/manga/${id}`, {
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
+        const res = await fetch(`${API_URL}/manga/${id}`)
         if(!res.ok){
             return new Response(JSON.stringify({error: res.statusText}))       
         }
-        const anime = await res.json()
-        return new Response(JSON.stringify({message: "Fetched anime", manga: anime.manga}))
+        const manga = await res.json()
+        return new Response(JSON.stringify({message: "Fetched manga", manga: manga.data}))
     } catch (e) {
         return new Response(JSON.stringify({error: e}))
     }

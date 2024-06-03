@@ -4,8 +4,8 @@
 
 </script>
 <div class="flex min-h-[60vh] w-full flex-row items-center justify-center p-5">
-	<div class="h-full w-1/2 flex justify-center">
-		<p class="text-2xl text-center w-4/5 text-green-400 font-light">
+	<div class="h-full w-1/2 flex justify-center p-7">
+		<p class="text-3xl text-center text-green-300 font-light">
 			AniList is a place where you can find all the information about your favorite anime and manga.
 			You can search for your favorite anime and manga and get all the information about them. You
 			can also search for your favorite genre and get all the anime and manga related to that genre.
@@ -14,7 +14,6 @@
     <div class="h-full w-1/2 flex items-center gap-3 flex-col">
         <button on:click={()=>goto("/anime")} class="button w-2/3 h-fit p-5 rounded-full bg-green-500 text-xl text-center font-bold">Anime</button>
         <button on:click={()=>goto("/manga")} class="button w-2/3 h-fit p-5 rounded-full bg-green-500 text-xl text-center font-bold">Manga</button>
-        <button on:click={()=>goto("/genre")} class="button w-2/3 h-fit p-5 rounded-full bg-green-500 text-xl text-center font-bold">Genre</button>
     </div>
 </div>
 
